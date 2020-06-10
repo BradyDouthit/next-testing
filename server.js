@@ -12,20 +12,6 @@ const handle = app.getRequestHandler()
 app.prepare().then(() => {
   const server = express()
 
-  server.use(session({
-    cookieName: 'session',
-    secret: config.client_secret,
-    duration: 24 * 60 * 60 * 1000,
-    activeDuration: 1000 * 60 * 5,
-    cookie: {
-      path: '/',
-      ephemeral: false,
-      httpOnly: true,
-      secure: false,
-      // sameSite: 'none'
-    }
-  }));
-
   server.get('/home', (req, res) => {
     console.log(req.session)
     return app.render(req, res, '/home', req.query)

@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import useSWR from 'swr'
+import useSWR from 'swr';
+import React from 'react';
 
 const fetcher = (url) => fetch(url).then((res) => res.json())
 
@@ -11,10 +12,12 @@ function Home() {
 
     return (
         <div>
-            <h1>Home</h1>
+            <h1>{data.title}</h1>
             <Link href="/about"><button>About</button></Link>
         </div>
     )
 }
-
+// Home.getInitialProps = async (ctx) => {
+    
+// }
 export default Home;

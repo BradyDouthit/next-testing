@@ -1,0 +1,1 @@
+{"ast":null,"code":"import React from \"react\";\nvar __jsx = React.createElement;\nimport Link from 'next/link';\n\nconst SystemIndex = () => __jsx(\"div\", null, __jsx(\"h1\", null, \"Welcome to System Index\"), __jsx(Link, {\n  href: \"/home\"\n}, __jsx(\"button\", null, \"Home Page\")));\n\nexport default SystemIndex;","map":null,"metadata":{},"sourceType":"module"}
